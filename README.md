@@ -54,7 +54,7 @@ Key findings:
 
 - speed_limit and num_reported_accidents were also strong predictors, though less gradual
 
-<img width="2189" height="989" alt="image" src="https://github.com/user-attachments/assets/c8fe66f4-ca45-41b5-89a6-dd64ed008602" />
+<img width="1085" height="490" alt="image" src="https://github.com/user-attachments/assets/c8fe66f4-ca45-41b5-89a6-dd64ed008602" />
   
 - night lighting conditions showed substantially higher accident risk 
   compared to daylight and dim conditions

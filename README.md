@@ -45,6 +45,14 @@ EDA included correlation heatmaps, histograms, countplots, and probability
 tables comparing feature distributions between Low Risk and High Risk roads. 
 Key findings:
 
+**Correlation Heatmap** — the first look at relationships between numeric 
+features and accident_risk. curvature and speed_limit showed the strongest 
+correlations with accident_risk, while num_lanes showed almost no 
+correlation, motivating its exclusion from modeling.
+
+<img width="914" height="528" alt="image" src="https://github.com/user-attachments/assets/9fdf90bc-fbe8-4b43-91a4-598afd7b63b2" />
+
+
 **Curvature** - the strongest predictor of accident risk. High risk roads 
 are concentrated at higher curvature values.
 

@@ -47,6 +47,8 @@ Key findings:
 - num_lanes, road_type, road_signs_present, public_road, time_of_day, 
   holiday, and school_season showed very little variation in accident risk 
   and were excluded from modeling
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/13976d9a-32ba-4ff2-98d0-612ea92382b8" />
+
 
 ### Problem Formulation
 - Input: 12 engineered features including curvature, speed_limit, 

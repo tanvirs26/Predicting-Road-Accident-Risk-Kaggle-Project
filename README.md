@@ -49,6 +49,7 @@ Key findings:
   and were excluded from modeling
 <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/13976d9a-32ba-4ff2-98d0-612ea92382b8" />
 
+<img width="1790" height="490" alt="image" src="https://github.com/user-attachments/assets/41377996-24de-4a14-83b0-c87eff88fa43" />
 
 ### Problem Formulation
 - Input: 12 engineered features including curvature, speed_limit, 

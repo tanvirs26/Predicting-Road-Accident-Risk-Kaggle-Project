@@ -16,7 +16,7 @@ trained and compared: Logistic Regression, Decision Tree, and Random Forest.
 Our best model, Logistic Regression, achieved an AUC-ROC of 0.9770 on the 
 validation set.
 
-## Summary of Workdone
+## Summary of Work Done
 
 ### Data
 - Type: CSV file of road condition features, output: binary risk classification

@@ -87,7 +87,7 @@ Key findings:
 - Software: Python 3.13, scikit-learn, pandas, numpy
 - Hardware: local machine (MacOS)
 - Logistic Regression and Decision Tree trained in seconds
-- Random Forest took longer due to the large dataset size — 
+- Random Forest took longer due to the large dataset size -
   n_jobs=-1 was used to split training across all CPU cores
 - Training was stopped automatically when the model converged or 
   reached max_iter=1000 for Logistic Regression
@@ -109,8 +109,8 @@ model. ROC curves and confusion matrices for all three models are available in t
 - Logistic Regression and Random Forest both achieved an accuracy of 0.91, 
   while Decision Tree achieved 0.90. Logistic Regression showed the best 
   overall performance with the highest AUC-ROC of 0.9770
-- The explicit feature engineering steps — binary flags and interaction 
-  terms — effectively captured non-linear relationships, reducing the 
+- The explicit feature engineering steps, binary flags and interaction 
+  terms, effectively captured nonlinear relationships, reducing the 
   advantage that tree based models typically have
 - Decision Tree showed the highest recall for High Risk roads (0.95) but 
   at the cost of more false positives, indicating a trade off between 

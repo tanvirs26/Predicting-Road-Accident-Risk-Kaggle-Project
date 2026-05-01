@@ -65,7 +65,7 @@ plotted separately by type to show raw count distributions by risk label.
 
 <img width="1389" height="490" alt="image" src="https://github.com/user-attachments/assets/d724ef96-f5dc-42ce-a9ef-1bb7f5576b1c" />
 
-- The probability plots below quantify the risk relationship for each 
+The probability plots below quantify the risk relationship for each 
 discrete feature more clearly, confirming threshold effects at 60mph
 for speed_limit and at 3 or more accidents for num_reported_accidents. 
 num_lanes showed very little variation and was excluded from modeling.

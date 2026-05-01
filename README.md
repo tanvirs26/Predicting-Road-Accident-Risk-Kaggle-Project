@@ -52,7 +52,7 @@ Key findings:
 
 <img width="1790" height="490" alt="image" src="https://github.com/user-attachments/assets/41377996-24de-4a14-83b0-c87eff88fa43" />
 
-- speed_limit was also very strong, while num_reported_accidents was moderate
+- speed_limit and num_reported_accidents were also strong predictors, though less gradual
 
 <img width="2189" height="989" alt="image" src="https://github.com/user-attachments/assets/c8fe66f4-ca45-41b5-89a6-dd64ed008602" />
   

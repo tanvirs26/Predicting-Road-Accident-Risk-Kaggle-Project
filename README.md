@@ -35,36 +35,47 @@ validation set.
 - One-hot encoded categorical features lighting and weather using drop_first=True
 - Created 4 interaction terms: speed_x_curvature, night_x_curvature, 
   highway_x_night, fog_x_highway
+- Kept raw counts of curvature since binning would be unneccessary with the newly created interaction terms
 - Applied StandardScaler to numeric features for Logistic Regression only
 
-<img width="908" height="500" alt="image" src="https://github.com/user-attachments/assets/209eae49-a4fd-4ad6-b77f-7ac5b15d77b1" />
-
 <img width="705" height="500" alt="image" src="https://github.com/user-attachments/assets/e6345475-d0ce-46a6-ab72-bb77d196147d" />
-
-
 
 ### Data Visualization
 EDA included correlation heatmaps, histograms, countplots, and probability 
 tables comparing feature distributions between Low Risk and High Risk roads. 
 Key findings:
 
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/13976d9a-32ba-4ff2-98d0-612ea92382b8" />
+**Curvature** — the strongest predictor of accident risk. High risk roads 
+are concentrated at higher curvature values.
 
-- curvature was the strongest predictor of accident risk
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/27df9117-72f2-400d-84e9-8bc21d328804" />
+
+**Discrete Features (speed_limit, num_lanes, num_reported_accidents)** — 
+plotted separately by type to show raw count distributions by risk label.
+
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/912b2901-1c44-403a-8b05-f0509bb94bba" />
+
+<img width="1389" height="490" alt="image" src="https://github.com/user-attachments/assets/d724ef96-f5dc-42ce-a9ef-1bb7f5576b1c" />
+
+The probability plots below quantify the risk relationship for each 
+discrete feature more clearly, confirming threshold effects at 60mph
+for speed_limit and at 3 or more accidents for num_reported_accidents. 
+num_lanes showed very little variation and was excluded from modeling.
 
 <img width="1790" height="490" alt="image" src="https://github.com/user-attachments/assets/41377996-24de-4a14-83b0-c87eff88fa43" />
 
-- speed_limit and num_reported_accidents were also strong predictors, though less gradual
+**Curvature Probability** — binned into quantile groups to visualize 
+the monotonic increase in accident risk from 1.2% in the lowest bin 
+to 42.6% in the highest bin.
+
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/13976d9a-32ba-4ff2-98d0-612ea92382b8" />
+
+**Lighting and Weather** — night conditions and foggy weather showed 
+substantially higher accident risk compared to other categories.
+  
+<img width="1085" height="490" alt="image" src="https://github.com/user-attachments/assets/a56a4069-2d15-4035-b068-5fe0c08c0d2a" />
 
 <img width="1085" height="490" alt="image" src="https://github.com/user-attachments/assets/c8fe66f4-ca45-41b5-89a6-dd64ed008602" />
-  
-- night lighting conditions showed substantially higher accident risk 
-  compared to daylight and dim conditions
-- foggy weather was associated with higher accident risk compared to clear 
-  and rainy conditions
-- num_lanes, road_type, road_signs_present, public_road, time_of_day, 
-  holiday, and school_season showed very little variation in accident risk 
-  and were excluded from modeling
 
 ### Problem Formulation
 - Input: 12 engineered features including curvature, speed_limit, 

@@ -82,8 +82,6 @@ Key findings:
 - Logistic Regression and Decision Tree trained in seconds
 - Random Forest took longer due to the large dataset size — 
   n_jobs=-1 was used to split training across all CPU cores
-- No training curves are available since scikit-learn models do not 
-  produce loss vs epoch curves — models converge in a single fit call
 - Training was stopped automatically when the model converged or 
   reached max_iter=1000 for Logistic Regression
   

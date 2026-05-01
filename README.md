@@ -44,7 +44,7 @@ Key findings:
 
 - curvature and speed_limit were the strongest predictors of accident risk
 
-  <img width="1790" height="490" alt="image" src="https://github.com/user-attachments/assets/41377996-24de-4a14-83b0-c87eff88fa43" />
+<img width="1790" height="490" alt="image" src="https://github.com/user-attachments/assets/41377996-24de-4a14-83b0-c87eff88fa43" />
 
 - night lighting conditions showed substantially higher accident risk 
   compared to daylight and dim conditions

@@ -42,20 +42,18 @@ Key findings:
 
 <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/13976d9a-32ba-4ff2-98d0-612ea92382b8" />
 
-
-- curvature and speed_limit were the strongest predictors of accident risk
+- curvature was the strongest predictor of accident risk
 
 <img width="1790" height="490" alt="image" src="https://github.com/user-attachments/assets/41377996-24de-4a14-83b0-c87eff88fa43" />
 
+- speed_limit was also very strong, while num_reported_accidents was moderate
 
+<img width="2189" height="989" alt="image" src="https://github.com/user-attachments/assets/c8fe66f4-ca45-41b5-89a6-dd64ed008602" />
+  
 - night lighting conditions showed substantially higher accident risk 
   compared to daylight and dim conditions
 - foggy weather was associated with higher accident risk compared to clear 
   and rainy conditions
-
-<img width="2189" height="989" alt="image" src="https://github.com/user-attachments/assets/c8fe66f4-ca45-41b5-89a6-dd64ed008602" />
-
-
 - num_lanes, road_type, road_signs_present, public_road, time_of_day, 
   holiday, and school_season showed very little variation in accident risk 
   and were excluded from modeling

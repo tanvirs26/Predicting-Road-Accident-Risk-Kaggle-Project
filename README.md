@@ -1,6 +1,5 @@
 # Predicting Road Accident Risk
 
-## One Sentence Summary
 This repository holds an attempt to apply binary classification models to 
 road accident risk prediction using data from the Kaggle Playground Series 
 Season 5 Episode 10 challenge (https://www.kaggle.com/competitions/playground-series-s5e10).

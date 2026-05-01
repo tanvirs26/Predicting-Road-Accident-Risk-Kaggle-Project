@@ -37,7 +37,7 @@ validation set.
 
 <img width="908" height="500" alt="image" src="https://github.com/user-attachments/assets/209eae49-a4fd-4ad6-b77f-7ac5b15d77b1" />
 
-<img width="1389" height="985" alt="image" src="https://github.com/user-attachments/assets/e6345475-d0ce-46a6-ab72-bb77d196147d" />
+<img width="705" height="500" alt="image" src="https://github.com/user-attachments/assets/e6345475-d0ce-46a6-ab72-bb77d196147d" />
 
 
 

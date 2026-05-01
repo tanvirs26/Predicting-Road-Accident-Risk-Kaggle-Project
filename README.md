@@ -30,13 +30,13 @@ validation set.
 ### Preprocessing / Clean Up
 - Converted continuous accident_risk target to binary classification using 
   a 0.5 threshold
-- Created binary flags is_highway (speed_limit >= 60) and is_accident_prone 
-  (num_reported_accidents >= 3) based on threshold effects identified in EDA
 - One-hot encoded categorical features lighting and weather using drop_first=True
 - Created 4 interaction terms: speed_x_curvature, night_x_curvature, 
   highway_x_night, fog_x_highway
-- Kept raw counts of curvature since binning would be unneccessary with the newly created interaction terms
+- Kept raw counts of curvature since binning would be unnecessary with the newly created interaction terms
 - Applied StandardScaler to numeric features for Logistic Regression only
+- Created binary flags is_highway (speed_limit >= 60) and is_accident_prone
+(num_reported_accidents >= 3) based on threshold effects identified in EDA
 
 <img width="705" height="500" alt="image" src="https://github.com/user-attachments/assets/e6345475-d0ce-46a6-ab72-bb77d196147d" />
 

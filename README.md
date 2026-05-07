@@ -25,7 +25,7 @@ validation set.
 - Split: 80% training (414,203 rows), 20% validation (103,551 rows). 
   Test set has no labels and was used for generating predictions only.
 - Class imbalance with classification task (81% Low Risk, 19% High Risk)\
-- No missing values/outliers
+- No missing values or outliers in the dataset
 
 ### Preprocessing / Clean Up
 - Converted continuous accident_risk target to binary classification using 

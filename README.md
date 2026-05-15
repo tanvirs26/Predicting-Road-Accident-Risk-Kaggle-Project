@@ -10,8 +10,8 @@ of accidents on different types of roads based on road conditions such as
 curvature, speed limit, lighting, and weather. The original challenge was 
 framed as a regression task predicting a continuous accident_risk score 
 between 0 and 1. This project reformulates the problem as a binary 
-classification task, categorizing roads as Low Risk (accident_risk < 0.5) 
-or High Risk (accident_risk >= 0.5). Three classification models were 
+classification task, categorizing roads as Low Risk (`accident_risk` < 0.5) 
+or High Risk (`accident_risk` >= 0.5). Three classification models were 
 trained and compared: Logistic Regression, Decision Tree, and Random Forest. 
 Our best model, Logistic Regression, achieved an AUC-ROC of 0.9770 on the 
 validation set.
@@ -28,15 +28,15 @@ validation set.
 - No missing values or outliers in the dataset
 
 ### Preprocessing / Clean Up
-- Converted continuous accident_risk target to binary classification using 
+- Converted continuous `accident_risk` target to binary classification using 
   a 0.5 threshold
-- One-hot encoded categorical features lighting and weather using drop_first=True
-- Created 4 interaction terms: speed_x_curvature, night_x_curvature, 
-  highway_x_night, fog_x_highway
-- Kept raw counts of curvature since binning would be unnecessary with the newly created interaction terms
+- One-hot encoded categorical features `lighting` and `weather` using drop_first=True
+- Created 4 interaction terms: `speed_x_curvature`, `night_x_curvature`, 
+  `highway_x_night`, `fog_x_highway`
+- Kept raw counts of `curvature` since binning would be unnecessary with the newly created interaction terms
 - Applied StandardScaler to numeric features for Logistic Regression only
-- Created binary flags is_highway (speed_limit >= 60) and is_accident_prone
-(num_reported_accidents >= 3) based on threshold effects identified in EDA
+- Created binary flags `is_highway` (`speed_limit` >= 60) and `is_accident_prone`
+(`num_reported_accidents` >= 3) based on threshold effects identified in EDA
 
 <img width="705" height="500" alt="image" src="https://github.com/user-attachments/assets/e6345475-d0ce-46a6-ab72-bb77d196147d" />
 
@@ -46,8 +46,8 @@ tables comparing feature distributions between Low Risk and High Risk roads.
 Key findings:
 
 **Correlation Heatmap** — the first look at relationships between numeric 
-features and accident_risk. curvature and speed_limit showed the strongest 
-correlations with accident_risk, while num_lanes showed almost no 
+features and `accident_risk`. `curvature` and `speed_limit` showed the strongest 
+correlations with `accident_risk`, while `num_lanes` showed almost no 
 correlation, motivating its exclusion from modeling.
 
 <img width="914" height="528" alt="image" src="https://github.com/user-attachments/assets/9fdf90bc-fbe8-4b43-91a4-598afd7b63b2" />
@@ -58,7 +58,7 @@ are concentrated at higher curvature values.
 
 <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/27df9117-72f2-400d-84e9-8bc21d328804" />
 
-**Discrete Features (speed_limit, num_lanes, num_reported_accidents)** - 
+**Discrete Features (`speed_limit`, `num_lanes`, `num_reported_accidents`)** - 
 plotted separately by type to show raw count distributions by risk label.
 
 <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/912b2901-1c44-403a-8b05-f0509bb94bba" />
@@ -67,8 +67,8 @@ plotted separately by type to show raw count distributions by risk label.
 
 The probability plots below quantify the risk relationship for each 
 discrete feature more clearly, confirming threshold effects at 60mph
-for speed_limit and at 3 or more accidents for num_reported_accidents. 
-num_lanes showed very little variation and was excluded from modeling.
+for `speed_limit` and at 3 or more accidents for `num_reported_accidents`. 
+`num_lanes` showed very little variation and was excluded from modeling.
 
 <img width="1790" height="490" alt="image" src="https://github.com/user-attachments/assets/41377996-24de-4a14-83b0-c87eff88fa43" />
 
@@ -85,8 +85,8 @@ substantially higher accident risk compared to other categories.
 <img width="1085" height="490" alt="image" src="https://github.com/user-attachments/assets/c8fe66f4-ca45-41b5-89a6-dd64ed008602" />
 
 ### Problem Formulation
-- Input: 12 engineered features including curvature, speed_limit, 
-  is_highway, is_accident_prone, one-hot encoded lighting and weather, 
+- Input: 12 engineered features including `curvature`, `speed_limit`, 
+  `is_highway`, `is_accident_prone`, one-hot encoded `lighting` and `weather`, 
   and 4 interaction terms
 - Output: binary classification — 0 (Low Risk) or 1 (High Risk)
 - Models:
